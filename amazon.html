@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amazon</title>
+    <style>
+      body {
+        background: url(bg3.jpg) no-repeat center center/cover;
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        margin-top: 50px;
+        height: 100vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .container {
+        background-color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border: 2px solid;
+        width: 300px;
+      }
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        color: brown;
+      }
+      h1:hover {
+        text-decoration: underline;
+      }
+      h2 {
+        text-align: center;
+        font-weight: bold;
+        color: black;
+      }
+      input {
+        margin: 10px 0;
+        padding: 10px;
+        width: 80%;
+        border-radius: 5px;
+        border: 3px solid;
+        text-align: center;
+        border: 1px solid;
+      }
+      .button {
+        background-color: lightblue;
+        width: 80%;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        transition: 0.3s;
+        margin-top: 10px;
+        border: 1px solid;
+      }
+
+      .button:hover {
+        background-color: whitesmoke;
+      }
+      .image {
+        width: 120px;
+        margin-bottom: 10px;
+      }
+      .forgot-password,
+      .signup {
+        margin-top: 10px;
+        font-size: 16px;
+        color: black;
+        cursor: pointer;
+      }
+      .forgot-password:hover,
+      .signup:hover {
+        text-decoration: underline;
+      }
+      .message {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: darkgoldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="amazon img.jpg" class="image" />
+      <h1>Welcome, to Amazon</h1>
+      <h2>Log in</h2>
+      <input type="text" id="nikhil" placeholder="Enter username" />
+      <input type="password" id="n1234" placeholder="Enter password" />
+      <button class="button" onclick="showMessage('Login successful')">
+        continue
+      </button>
+      <p class="forgot-password" onclick="showMessage('password reset')">
+        Forgot password?
+      </p>
+      <p class="signup" onclick="showMessage('create new account')">sign up?</p>
+      <p class="message" id="message"></p>
+    </div>
+    <script>
+      function showMessage(msg) {
+        document.getElementById("message").innerText = msg;
+      }
+    </script>
+  </body>
+</html>
